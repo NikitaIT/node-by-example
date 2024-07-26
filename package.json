@@ -1,0 +1,33 @@
+{
+  "name": "platform-cashier-service",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./src/main.ts",
+  "private": true,
+  "scripts": {
+    "start": "node ./src/main.ts",
+    "build": "typecheck && tsc",
+    "typecheck": "tsc --noEmit",
+    "tsc:watch": "tsc --watch --outDir ./dist",
+    "test": "node --import=tsx/esm --conditions=@nikitait/runtypes --test --experimental-test-coverage --watch",
+    "serve": "node --import=tsx/esm --conditions=@nikitait/runtypes ./packages/app-shell/src/main.ts --watch"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "es-main": "*"
+  },
+  "engines": {
+    "node": ">=22.3.0",
+    "npm": ">=10.3.0"
+  },
+  "engineStrict": true,
+  "devDependencies": {
+    "tsx": "*",
+    "@tsconfig/node-lts": "*",
+    "@tsconfig/strictest": "*",
+    "@types/node": "*",
+    "typescript": "*"
+  }
+}

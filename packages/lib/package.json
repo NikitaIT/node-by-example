@@ -1,0 +1,42 @@
+{
+  "name": "@nikitait/lib",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "private": true,
+  "scripts": {
+    "build": "typecheck && tsc",
+    "typecheck": "tsc --noEmit",
+    "watch": "tsc --watch",
+    "test": "node-test --watch"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/src/index.d.ts",
+        "//": "./This is custom condition for TS runtime type support",
+        "@nikitait/runtypes": "./src/index.ts",
+        "default": "./dist/src/index.js"
+      },
+      "require": {
+        "types": "./dist/src/index.d.ts",
+        "@nikitait/runtypes": "./src/index.ts",
+        "default": "./dist/src/index.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "es-main": "*"
+  },
+  "engineStrict": true,
+  "devDependencies": {
+    "@nikitait/node-test": "*",
+    "@nikitait/tsconfig-dist": "*",
+    "@tsconfig/node-lts": "*",
+    "@tsconfig/strictest": "*",
+    "@types/node": "*",
+    "typescript": "*"
+  }
+}

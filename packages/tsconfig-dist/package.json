@@ -1,0 +1,15 @@
+{
+  "name": "@nikitait/tsconfig-dist",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nikitait/node-by-example.git",
+    "directory": "packages/tsconfig-dist"
+  },
+  "license": "MIT",
+  "description": "A base TSConfig for working with dist.",
+  "keywords": [
+    "tsconfig",
+    "dist"
+  ],
+  "version": "1.0.0"
+}

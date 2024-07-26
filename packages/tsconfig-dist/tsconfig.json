@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "outDir": "${configDir}/dist",
+    "customConditions": ["@nikitait/runtypes"],
+    "composite": true,
+    "incremental": true,
+    "declaration": true,
+    "declarationMap": true,
+  },
+  "exclude": ["${configDir}/dist"]
+}

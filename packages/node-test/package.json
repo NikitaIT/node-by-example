@@ -1,0 +1,30 @@
+{
+  "name": "@nikitait/node-test",
+  "version": "1.0.0",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "TIMING=1 eslint \"./src\" ",
+    "lint:fix": "TIMING=1 eslint \"./src\" --fix",
+    "test:ts": "tsc --noEmit",
+    "test": "pnpm run test:ts"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./src/index.ts",
+  "bin": {
+    "node-test": "src/script.js"
+  },
+  "peerDependencies": {
+    "glob": "^10.3.16"
+  },
+  "dependencies": {
+    "glob": "^10.3.16"
+  },
+  "devDependencies": {
+    "tsx": "^4.10.5",
+    "@tsconfig/node-lts": "*",
+    "@tsconfig/strictest": "*"
+  },
+  "prettier": "prettier-config"
+}

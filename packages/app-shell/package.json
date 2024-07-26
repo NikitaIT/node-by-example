@@ -1,0 +1,45 @@
+{
+  "name": "@nikitait/app",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./src/main.ts",
+  "private": true,
+  "scripts": {
+    "start": "node ./src/main.ts",
+    "build": "typecheck && tsc",
+    "typecheck": "tsc --noEmit",
+    "watch": "tsc --watch",
+    "test": "node-test",
+    "d": "node --experimental-test-coverage --test --watch \"./dist/**/*.test.js\"",
+    "test:watch": "node-test --watch"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/src/main.d.ts",
+        "//": "./This is custom condition for TS runtime type support",
+        "@nikitait/runtypes": "./src/main.ts",
+        "default": "./dist/src/main.js"
+      },
+      "require": {
+        "types": "./dist/src/main.d.ts",
+        "@nikitait/runtypes": "./src/main.ts",
+        "default": "./dist/src/main.js"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "es-main": "*"
+  },
+  "engineStrict": true,
+  "devDependencies": {
+    "@nikitait/node-test": "*",
+    "@nikitait/lib": "*",
+    "@nikitait/tsconfig-dist": "*",
+    "@tsconfig/node-lts": "*",
+    "@tsconfig/strictest": "*",
+    "@types/node": "*",
+    "typescript": "*"
+  }
+}

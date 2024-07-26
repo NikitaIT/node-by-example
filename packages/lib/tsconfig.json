@@ -1,0 +1,5 @@
+{
+  // https://github.com/tsconfig/bases/blob/main/bases/strictest.json
+  // https://github.com/tsconfig/bases/blob/main/bases/node-lts.json
+  "extends": ["@tsconfig/strictest/tsconfig", "@tsconfig/node-lts/tsconfig", "@nikitait/tsconfig-dist/tsconfig"]
+}
