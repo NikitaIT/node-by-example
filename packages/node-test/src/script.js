@@ -1,4 +1,4 @@
-#! /usr/bin/env -S node --experimental-test-coverage --import tsx/esm --conditions=@nikitait/runtypes
+#! /usr/bin/env -S node --import tsx/esm --conditions=@nikitait/runtypes
 
 import { run } from "node:test";
 import { spec } from "node:test/reporters";
