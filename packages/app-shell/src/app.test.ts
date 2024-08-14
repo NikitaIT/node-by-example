@@ -12,3 +12,17 @@ await describe("mock.fn", async () => {
     assert.strictEqual(fn(), 0);
   });
 });
+
+await describe("_", async () => {
+  await it("_", {}, (__proto__) => {});
+});
+
+/**
+ * The difference() fn of Array instances takes an Array
+ * and returns a new Array containing elements which
+ * are in either this Array or the given Array,
+ * but not in both.
+ */
+export function difference(_this: [], other: []) {
+  return [_this, other];
+}
