@@ -3,5 +3,5 @@
 Run:
 
 ```sh
-npm i && cd ./packages/app-shell && npm run test:watch
+npm i --engine-strict=false && cd ./packages/app-shell && npm run test:watch
 ```
